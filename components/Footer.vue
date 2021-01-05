@@ -45,10 +45,22 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      electLogo: require('~/assets/images/logo/elect-logo-white.svg'),
-      puLogo: require('~/assets/images/logo/pu-logo-white.svg'),
-      bmlLogo: require('~/assets/images/logo/bml-logo-white.svg'),
-      ilawLogo: require('~/assets/images/logo/ilaw-logo.svg'),
+      electLogo:
+        window.innerWidth > 768
+          ? require('~/assets/images/logo/elect-logo-white.svg')
+          : require('~/assets/images/logo/elect-logo-white-mobile.svg'),
+      puLogo:
+        window.innerWidth > 768
+          ? require('~/assets/images/logo/pu-logo-white.svg')
+          : require('~/assets/images/logo/pu-logo-white-mobile.svg'),
+      bmlLogo:
+        window.innerWidth > 768
+          ? require('~/assets/images/logo/bml-logo-white.svg')
+          : require('~/assets/images/logo/bml-logo-white-mobile.svg'),
+      ilawLogo:
+        window.innerWidth > 768
+          ? require('~/assets/images/logo/ilaw-logo.svg')
+          : require('~/assets/images/logo/ilaw-logo-mobile.svg'),
       fbLogo: require('~/assets/images/logo/facebook-white.svg'),
       twitLogo: require('~/assets/images/logo/twitter-white.svg'),
     }
@@ -125,6 +137,62 @@ export default Vue.extend({
       margin-top: 1rem;
       font-weight: normal;
       color: #fff;
+    }
+  }
+}
+
+@media #{$mq-mobile} {
+  .page-container {
+    padding: 4rem 3.5rem 3.5rem 3.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .top {
+    flex-direction: row;
+    height: auto;
+    align-items: flex-start;
+    width: 100vw;
+    &-left {
+      flex: none;
+      width: 50%;
+    }
+
+    &-right {
+      width: 50%;
+      > * {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    width: 100vw;
+    margin-top: 3.2rem;
+    &-left {
+      width: 50%;
+      .text {
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-right {
+      align-items: flex-start;
+      .pair-container {
+        align-items: flex-start;
+        width: 14.8rem;
+      }
+
+      .header {
+        font-size: 1rem;
+      }
+
+      .detail {
+        font-size: 0.8rem;
+      }
     }
   }
 }

@@ -35,4 +35,11 @@ export default Vue.extend({
   color: #000;
   position: relative;
 }
+
+@media #{$mq-mobile} {
+  .text-top {
+    font-size: 2.5rem;
+    width: 26.9rem;
+  }
+}
 </style>

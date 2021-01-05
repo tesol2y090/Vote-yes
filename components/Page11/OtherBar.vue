@@ -70,4 +70,38 @@ export default Vue.extend({})
     cursor: pointer;
   }
 }
+
+@media #{$mq-mobile} {
+  .bar-container {
+    height: 11rem;
+    flex-direction: column;
+  }
+
+  .other-text {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 0.6rem;
+  }
+
+  .slide-container {
+    margin-top: 2rem;
+    font-size: 1rem;
+    width: 16.8rem;
+
+    &:before {
+      border-top: 0.5rem solid transparent;
+      border-right: 1rem solid #a9fbc0;
+      border-bottom: 0.5rem solid transparent;
+    }
+
+    &:after {
+      border-top: 0.5rem solid transparent;
+      border-left: 1rem solid #a9fbc0;
+      border-bottom: 0.5rem solid transparent;
+    }
+  }
+}
 </style>

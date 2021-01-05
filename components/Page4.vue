@@ -25,7 +25,10 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      box: require('~/assets/images/box-page4-dt.svg'),
+      box:
+        window.innerWidth > 768
+          ? require('~/assets/images/box-page4-dt.svg')
+          : require('~/assets/images/box-page4-mobile.svg'),
     }
   },
 })
@@ -75,5 +78,37 @@ export default Vue.extend({
   width: 22rem;
   right: -24rem;
   top: 32rem;
+}
+
+@media #{$mq-mobile} {
+  .not-remember {
+    font-size: 1.4rem;
+    left: -9.6rem;
+    bottom: 8.5rem;
+    transform: rotate(-90deg);
+  }
+
+  .polity {
+    font-size: 1.4rem;
+    top: -2rem;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 11rem;
+  }
+
+  .polity-question {
+    font-size: 1.4rem;
+    bottom: -8rem;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 10rem;
+  }
+
+  .question {
+    font-size: 1.4rem;
+    top: 9.2rem;
+    left: 12rem;
+    transform: rotate(-90deg);
+  }
 }
 </style>

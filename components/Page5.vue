@@ -23,7 +23,10 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      underlineBlack: require('~/assets/images/underline-black.svg'),
+      underlineBlack:
+        window.innerWidth > 768
+          ? require('~/assets/images/underline-black.svg')
+          : require('~/assets/images/underline-black-mobile.svg'),
       arrow: require('~/assets/images/arrow.svg'),
     }
   },
@@ -93,5 +96,25 @@ export default Vue.extend({
   position: absolute;
   bottom: -9rem;
   left: 34rem;
+}
+
+@media #{$mq-mobile} {
+  .text-top {
+    font-size: 2.5rem;
+    line-height: 125%;
+  }
+
+  .text-mid {
+    font-size: 2.5rem;
+    width: 17.8rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    line-height: 125%;
+  }
+
+  .underline {
+    top: 0;
+    left: 11.4rem;
+  }
 }
 </style>

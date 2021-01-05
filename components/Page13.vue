@@ -182,4 +182,100 @@ export default Vue.extend({
   right: 1.6rem;
   cursor: pointer;
 }
+
+@media #{$mq-mobile} {
+  .box-top {
+    flex-direction: column;
+    &-left {
+      margin-right: 0rem;
+    }
+    &-right {
+      flex-direction: column;
+    }
+  }
+
+  .box-bottom {
+    display: flex;
+    flex-direction: column;
+    &-left {
+      margin-top: 0rem;
+      display: flex;
+      justify-content: flex-start;
+      margin-right: 0;
+      width: auto;
+    }
+
+    &-right {
+      display: flex;
+      width: auto;
+      margin-top: 0rem;
+    }
+  }
+
+  .box83 {
+    width: 26rem;
+    height: 26rem;
+    padding-top: 1.1rem;
+    padding-left: 1.6rem;
+    &-text {
+      font-size: 3rem;
+      width: 16.9rem;
+      line-height: 120%;
+    }
+  }
+
+  .box53 {
+    margin-top: 3rem;
+    width: 20.8rem;
+    height: 20.8rem;
+    padding-top: 1.1rem;
+    padding-left: 1.6rem;
+    &-text {
+      font-size: 2.5rem;
+      width: 17.8rem;
+      line-height: 120%;
+    }
+  }
+
+  .box38 {
+    margin-top: 3rem;
+    width: 17.6rem;
+    height: 17.6rem;
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    &-text {
+      font-size: 2rem;
+      width: 13.8rem;
+      line-height: 120%;
+    }
+  }
+
+  .other-box {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    width: 26rem;
+    height: 14.6rem;
+  }
+
+  .other-text {
+    font-size: 2rem;
+  }
+
+  .text-box {
+    width: 18rem;
+    font-size: 1rem;
+  }
+
+  .arrow-left {
+    border-top: 0.5rem solid transparent;
+    border-right: 1rem solid #28b55f;
+    border-bottom: 0.5rem solid transparent;
+  }
+
+  .arrow-right {
+    border-top: 0.5rem solid transparent;
+    border-left: 1rem solid #28b55f;
+    border-bottom: 0.5rem solid transparent;
+  }
+}
 </style>

@@ -15,6 +15,7 @@
     <Page12 />
     <Page13 />
     <Page14 />
+    <Page15 />
     <Footer />
   </div>
 </template>

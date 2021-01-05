@@ -54,3 +54,21 @@ html {
 .page-height-200 {
   height: 200rem;
 }
+
+@media #{$mq-mobile} {
+  .page-height-29 {
+    height: 31.2rem;
+  }
+
+  .page-height-80 {
+    height: 56.8rem;
+  }
+
+  .page-height-128 {
+    height: 100rem;
+  }
+
+  .page-height-200 {
+    height: 100rem;
+  }
+}

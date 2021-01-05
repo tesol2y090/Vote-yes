@@ -30,4 +30,16 @@
   font-size: 3rem;
   margin-top: 2.5rem;
 }
+
+@media #{$mq-mobile} {
+  .title {
+    font-size: 1.5rem;
+    width: 26.9rem;
+  }
+
+  .update {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
 </style>

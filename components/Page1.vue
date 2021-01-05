@@ -13,7 +13,10 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      ilawXElect: require('~/assets/images/ilawxelect.svg'),
+      ilawXElect:
+        window.innerWidth > 768
+          ? require('~/assets/images/ilawxelect.svg')
+          : require('~/assets/images/ilawxelect-mobile.svg'),
       triangle: require('~/assets/images/triangle.svg'),
     }
   },
@@ -49,5 +52,17 @@ export default Vue.extend({
 
 .triangle {
   margin-top: 8.4rem;
+}
+
+@media #{$mq-mobile} {
+  .page-container {
+    height: calc(100vh - 5rem);
+    background-image: url('../assets/images/cross-sign-mobile.svg');
+  }
+
+  .title {
+    font-size: 4.8rem;
+    width: 27.2rem;
+  }
 }
 </style>

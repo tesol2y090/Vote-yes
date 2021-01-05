@@ -34,4 +34,11 @@ export default Vue.extend({
   flex-direction: column;
   align-items: center;
 }
+
+@media #{$mq-mobile} {
+  .title {
+    font-size: 2.5rem;
+    width: 20.6rem;
+  }
+}
 </style>

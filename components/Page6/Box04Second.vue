@@ -33,4 +33,25 @@ export default Vue.extend({})
   color: #000;
   z-index: 9;
 }
+
+@media #{$mq-mobile} {
+  .box {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-width: 0.5rem;
+    position: relative;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .text {
+    position: absolute;
+    right: -14.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    font-size: 1.2rem;
+    width: 12.6rem;
+  }
+}
 </style>

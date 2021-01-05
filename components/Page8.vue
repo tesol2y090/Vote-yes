@@ -54,4 +54,24 @@ export default Vue.extend({})
     flex-direction: column;
   }
 }
+
+@media #{$mq-mobile} {
+  .box-top {
+    flex-direction: column;
+    &-left {
+      flex-direction: column;
+      margin-right: 0;
+    }
+  }
+
+  .box-bottom {
+    margin-top: 0;
+    flex-direction: column;
+    &-left {
+      flex-direction: column;
+      margin-right: 0;
+      width: auto;
+    }
+  }
+}
 </style>

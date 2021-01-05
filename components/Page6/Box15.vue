@@ -32,4 +32,18 @@ export default Vue.extend({})
   margin-top: 1.6rem;
   color: #000;
 }
+
+@media #{$mq-mobile} {
+  .box {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-width: 0.5rem;
+  }
+  .text {
+    margin-top: 0.5rem;
+    margin-left: 0.8rem;
+    font-size: 2rem;
+    width: 10.6rem;
+  }
+}
 </style>

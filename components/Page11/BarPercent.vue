@@ -49,4 +49,22 @@ export default Vue.extend({
   font-weight: bold;
   color: #fff;
 }
+
+@media #{$mq-mobile} {
+  .bar-container {
+    height: 5rem;
+  }
+
+  .bar-green {
+    padding-left: 1.5rem;
+  }
+
+  .percent {
+    font-size: 4.5rem;
+  }
+
+  .detail {
+    font-size: 1.2rem;
+  }
+}
 </style>

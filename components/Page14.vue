@@ -25,11 +25,19 @@
         v-for="(data, key) in datas"
         v-bind:key="key"
         class="page-bg"
-        :style="`width: ${45.6 - 1.2 * data}rem; height: ${
-          45.6 - 1.2 * data
-        }rem; top: ${2.2 * data}rem; left: ${2.2 * data}rem;z-index: ${
-          33 - data
-        }`"
+        :style="
+          isDesktop
+            ? `width: ${45.6 - 1.2 * data}rem; height: ${
+                45.6 - 1.2 * data
+              }rem; top: ${2.2 * data}rem; left: ${2.2 * data}rem;z-index: ${
+                33 - data
+              }`
+            : `width: ${22.6 - 1.2 * data}rem; height: ${
+                22.6 - 1.2 * data
+              }rem; top: ${2.2 * data}rem; left: ${2.2 * data}rem;z-index: ${
+                33 - data
+              }`
+        "
       />
     </div>
   </div>
@@ -41,9 +49,13 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      nextPageIcon: require('~/assets/images/next-paper-icon.svg'),
+      nextPageIcon:
+        window.innerWidth > 768
+          ? require('~/assets/images/next-paper-icon.svg')
+          : require('~/assets/images/next-paper-icon-mobile.svg'),
       datas: [...Array(30).keys()],
       showText: false,
+      isDesktop: window.innerWidth > 768,
     }
   },
   methods: {
@@ -112,5 +124,43 @@ export default Vue.extend({
   left: 1rem;
   border: 0.3rem solid #f0efe9;
   position: absolute;
+}
+
+@media #{$mq-mobile} {
+  .page-container {
+    flex-direction: column;
+    height: 113.6rem;
+  }
+
+  .left {
+    font-size: 2.5rem;
+    width: 23.6rem;
+    text-align: center;
+    height: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    height: 50%;
+    margin-left: 0;
+  }
+
+  .page-show {
+    width: 22.6rem;
+    height: 22.6rem;
+    font-size: 1.5rem;
+    padding: 1.6rem 0.8rem 1.6rem 1.8rem;
+  }
+
+  .next-page-icon {
+    bottom: 1.4rem;
+    right: 0;
+    position: absolute;
+  }
+
+  .next-page-text {
+    display: none;
+  }
 }
 </style>

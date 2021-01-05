@@ -14,7 +14,10 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      underlineBlack: require('~/assets/images/underline-black.svg'),
+      underlineBlack:
+        window.innerWidth > 768
+          ? require('~/assets/images/underline-black.svg')
+          : require('~/assets/images/underline-black-mobile.svg'),
     }
   },
 })
@@ -35,5 +38,17 @@ export default Vue.extend({
   position: absolute;
   bottom: -9rem;
   left: 40rem;
+}
+
+@media #{$mq-mobile} {
+  .title {
+    font-size: 2.5rem;
+    width: 23rem;
+  }
+
+  .underline {
+    left: 4.2rem;
+    bottom: -4rem;
+  }
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
   <div class="another-container">
-    <div class="text">
-      อื่นๆ
-      <span class="text-green">11.75%</span>
+    <div class="click-container">
+      <div class="text">
+        อื่นๆ
+        <span class="text-green">11.75%</span>
+      </div>
+      <div class="detail-text">(คลิกเพื่อดูรายละเอียด)</div>
     </div>
-    <div class="detail-text">(คลิกเพื่อดูรายละเอียด)</div>
     <div class="box-container">
       <div class="box" />
       <div class="box" />
@@ -117,6 +119,51 @@ export default Vue.extend({})
     width: 0.4rem;
     background-color: #fff;
     transform: rotate(-45deg);
+  }
+}
+
+@media #{$mq-mobile} {
+  .another-container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .click-container {
+    width: 5rem;
+    margin-left: 0.5rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+
+  .detail-text {
+    font-size: 1rem;
+  }
+
+  .box-container {
+    width: 20rem;
+    margin-top: 0;
+  }
+
+  .box {
+    width: 2rem;
+    height: 2rem;
+    border-width: 0.2rem;
+    margin: 0 0.5rem 0.5rem 0;
+    &:before {
+      width: 0.2rem;
+      height: 2.5rem;
+      left: 0.7rem;
+      top: -0.4rem;
+    }
+
+    &:after {
+      width: 0.2rem;
+      height: 2.5rem;
+      left: 0.7rem;
+      top: -0.4rem;
+    }
   }
 }
 </style>
