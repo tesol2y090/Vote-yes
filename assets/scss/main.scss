@@ -1,0 +1,56 @@
+@import './base';
+@import './font';
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+.text-green {
+  color: #28b55f;
+}
+
+.text-blue {
+  color: #2d6ed3;
+}
+
+.page-container {
+  width: 100vw;
+  position: relative;
+  background-color: #f0efe9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-light-blue {
+  background-color: #cde4ed;
+}
+
+.page-light-green {
+  background-color: #a9fbc0;
+}
+
+.page-blue {
+  background-color: #20208e;
+}
+
+.page-black {
+  background-color: #000;
+}
+
+.page-height-29 {
+  height: 29rem;
+}
+
+.page-height-80 {
+  height: 80rem;
+}
+
+.page-height-128 {
+  height: 128rem;
+}
+
+.page-height-200 {
+  height: 200rem;
+}

@@ -1,0 +1,185 @@
+<template>
+  <div class="page-container page-height-200">
+    <div class="box-top">
+      <div class="box-top-left">
+        <div class="box83">
+          <div class="box83-text">
+            แสดงออกต่อสาธารณะต่อคนรอบตัวว่าคิดใหม่ได้แล้ว
+            <span class="text-green"> 83% </span>
+          </div>
+        </div>
+      </div>
+      <div class="box-top-right">
+        <div class="box53">
+          <div class="box53-text">
+            เข้าร่วมชุมนุมเพื่อเรียกร้องให้แก้ไขรัฐธรรมนูญ
+            <span class="text-green"> 53% </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-bottom">
+      <div class="box-bottom-left">
+        <div class="box38">
+          <div class="box38-text">
+            เป็นหนึ่งใน100,732 ที่เข้าชื่อเสนอ แก้ไขรัฐธรรมนูญ
+            <span class="text-green"> 38% </span>
+          </div>
+        </div>
+      </div>
+      <div class="box-bottom-right">
+        <div class="other-box">
+          <div class="arrow-left" />
+          <div class="arrow-right" />
+          <div class="other-text text-green">อื่นๆ</div>
+          <div class="text-box">
+            ควรเคารพสิทธิของคนทุกคน ทุกสิ่งสามารถให้ร่วมพิจารณาได้
+            แต่ไม่สามารถเป็นดั่งใจได้ทุกสิ่ง ต้องยอมรับ เพราะเป็นเรื่องปกติ
+            มิใช่เรื่องที่ผิดแปลก ต้องว่ากัน
+            ตามเหตุตามผลและรับฟังรอบข้างทั้งฝ่ายสนับสนุน และฝ่ายค้าน
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data() {
+    return {}
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+.page-container {
+  flex-direction: column;
+}
+
+.box-top {
+  display: flex;
+  &-left {
+    display: flex;
+    margin-right: 5rem;
+  }
+  &-right {
+    display: flex;
+  }
+}
+
+.box-bottom {
+  display: flex;
+  &-left {
+    margin-top: -16.9rem;
+    width: 61.6rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+  }
+
+  &-right {
+    display: flex;
+    width: 49rem;
+    margin-top: 13rem;
+  }
+}
+
+.box83 {
+  width: 61.6rem;
+  height: 61.6rem;
+  background-color: #20208e;
+  padding-top: 2.9rem;
+  padding-left: 4.9rem;
+  &-text {
+    color: #fff;
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 120%;
+    width: 45rem;
+  }
+}
+
+.box53 {
+  width: 49rem;
+  height: 49rem;
+  background-color: #20208e;
+  padding-top: 4.2rem;
+  padding-left: 3.3rem;
+  margin-top: 49.2rem;
+  &-text {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: bold;
+    line-height: 120%;
+    width: 42.6rem;
+  }
+}
+
+.box38 {
+  width: 41.8rem;
+  height: 41.8rem;
+  background-color: #20208e;
+  padding-top: 2.4rem;
+  padding-left: 3.8rem;
+  &-text {
+    color: #fff;
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 120%;
+    width: 34rem;
+  }
+}
+
+.other-box {
+  width: 40rem;
+  height: 40rem;
+  border: 0.3rem solid #20208e;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.other-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.text-box {
+  width: 26.8rem;
+  color: #20208e;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.arrow-left {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent;
+  border-right: 3rem solid #28b55f;
+  border-bottom: 1.5rem solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.6rem;
+  cursor: pointer;
+}
+
+.arrow-right {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent;
+  border-left: 3rem solid #28b55f;
+  border-bottom: 1.5rem solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.6rem;
+  cursor: pointer;
+}
+</style>

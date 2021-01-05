@@ -1,0 +1,35 @@
+<template>
+  <div class="box">
+    <div class="text">
+      ไม่ทราบว่า เป็นการให้ ส.ว. ชุดพิเศษเลือก นายกรัฐมนตรีได้
+      <span class="text-green">33.73%</span>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({})
+</script>
+
+<style lang="scss" scoped>
+.box {
+  background-image: url('../../assets/images/page6/cross-sign.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 51.5rem;
+  height: 51.5rem;
+  border: 1.5rem solid #fff;
+}
+
+.text {
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 120%;
+  width: 41.3rem;
+  margin-left: 2.1rem;
+  margin-top: 2rem;
+  color: #000;
+}
+</style>

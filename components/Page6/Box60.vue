@@ -1,0 +1,34 @@
+<template>
+  <div class="box">
+    <div class="text">
+      ต้องการให้ มีเลือกตั้ง โดยเร็วที่สุด <span class="text-blue">60.2%</span>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({})
+</script>
+
+<style lang="scss" scoped>
+.box {
+  background-image: url('../../assets/images/page6/cross-sign.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75rem;
+  height: 75rem;
+  border: 1.5rem solid #fff;
+}
+
+.text {
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 120%;
+  width: 38rem;
+  margin-left: 4.6rem;
+  margin-top: 3.2rem;
+  color: #000;
+}
+</style>
