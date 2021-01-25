@@ -8,54 +8,78 @@
       <div class="detail-text">(คลิกเพื่อดูรายละเอียด)</div>
     </div>
     <div class="box-container">
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
-      <div class="box" />
+      <div
+        v-for="(data, index) in poliDatas"
+        v-bind:key="index"
+        :class="{
+          box: true,
+          'card-selected': selectedBoxIndex === data.key,
+        }"
+        @click="handleClickBox(data, data.key)"
+      />
+      <div
+        class="show-detail-text hidden"
+        :style="`top: ${top}rem; left: ${left}rem`"
+      >
+        {{ this.selectedData.message }}
+      </div>
+    </div>
+    <div class="show-detail-text-mobile hidden">
+      {{ this.selectedData.message }}
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+// @ts-ignore
+import datas from '~/assets/data/vote-yes-data.json'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      poliDatas: datas,
+      selectedBoxIndex: -1,
+      selectedData: '',
+      top: 1.5,
+      left: 1.5,
+    }
+  },
+
+  methods: {
+    handleClickBox(data: string, index: number) {
+      const boxDetail = document.querySelectorAll('.show-detail-text')[0]
+      const boxDetailMobile = document.querySelectorAll(
+        '.show-detail-text-mobile'
+      )[0]
+      // Hidding Box
+      if (this.selectedBoxIndex === index) {
+        this.selectedBoxIndex = -1
+        boxDetailMobile.classList.remove('visible')
+        boxDetailMobile.classList.add('hidden')
+        boxDetail.classList.remove('visible')
+        boxDetail.classList.add('hidden')
+        return
+      }
+      boxDetail.classList.add('visible')
+      boxDetail.classList.remove('hidden')
+      boxDetailMobile.classList.remove('hidden')
+      boxDetailMobile.classList.add('visible')
+      this.top = 1.5 + Math.floor(index / 10) * 3.5
+      this.left = 1.5 + Math.floor(index % 10) * 3.5
+      this.selectedBoxIndex = index
+      this.selectedData = data
+    },
+  },
+
+  mounted(this: any) {
+    this.poliDatas = this.poliDatas
+      .map((data: any, index: number) => {
+        return { message: data['cause-polity'], key: index }
+      })
+      .filter((data: any) => data.message !== '')
+  },
+})
 </script>
 
 <style lang="scss" scoped>
@@ -63,6 +87,16 @@ export default Vue.extend({})
   margin-top: 1.7rem;
   display: flex;
   flex-direction: column;
+}
+
+.show-detail-text {
+  position: absolute;
+  width: 20rem;
+  padding: 0.8rem;
+  background-color: #cde4ed;
+  border: 0.2rem solid #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 .text {
@@ -80,6 +114,7 @@ export default Vue.extend({})
 }
 
 .box-container {
+  position: relative;
   display: flex;
   margin-top: 1.3rem;
   width: 36rem;
@@ -115,10 +150,26 @@ export default Vue.extend({})
   }
 }
 
+.show-detail-text-mobile {
+  display: none;
+}
+
+.card-selected {
+  border-color: #2d6ed3;
+  &::before,
+  &::after {
+    background-color: #2d6ed3;
+  }
+}
+
 @media #{$mq-mobile} {
   .another-container {
     flex-direction: row-reverse;
     justify-content: flex-end;
+  }
+
+  .show-detail-text {
+    display: none;
   }
 
   .text {
@@ -133,6 +184,7 @@ export default Vue.extend({})
   .box-container {
     width: 12.4rem;
     margin-top: 0;
+    margin-right: 1rem;
   }
 
   .box {
@@ -153,6 +205,18 @@ export default Vue.extend({})
       left: 0.3rem;
       top: -0.2rem;
     }
+  }
+
+  .show-detail-text-mobile {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100rem - 10rem);
+    width: 26rem;
+    padding: 0.8rem;
+    border: 0.2rem solid #ffffff;
+    background: #cde4ed;
   }
 }
 </style>

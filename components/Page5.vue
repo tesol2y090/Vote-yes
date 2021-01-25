@@ -5,13 +5,19 @@
         โดยสาเหตุที่เห็นชอบกับ
         <img class="underline" :src="underlineBlack" />
       </div>
-      <div class="text-mid polity-hover">
-        ร่างรัฐธรรมนูญ
-        <div class="arrow-container">
-          <img :src="arrow" />
-          <div class="arrow-text">Link ไปร่างรัฐธรรมนูญ</div>
+      <a
+        href="https://ilaw.or.th/sites/default/files/Draft%20Constitution%202559_2.pdf"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <div class="text-mid polity-hover">
+          ร่างรัฐธรรมนูญ
+          <div class="arrow-container">
+            <img :src="arrow" />
+            <div class="arrow-text">Link ไปร่างรัฐธรรมนูญ</div>
+          </div>
         </div>
-      </div>
+      </a>
       <div class="text-top">ในปี 2559 นั้นคือ..</div>
     </div>
   </div>

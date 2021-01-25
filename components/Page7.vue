@@ -5,13 +5,19 @@
         สำหรับคนที่เห็นชอบกับ
         <img class="underline" :src="underlineBlack" />
       </div>
-      <div class="text-mid polity-hover">
-        คำถามพ่วง
-        <div class="arrow-container">
-          <img :src="arrow" />
-          <div class="arrow-text">Link ไปคำถามพ่วง</div>
+      <a
+        href="https://ilaw.or.th/node/4195"
+        target="_blank"
+        style="text-decoration: none"
+      >
+        <div class="text-mid polity-hover">
+          คำถามพ่วง
+          <div class="arrow-container">
+            <img :src="arrow" />
+            <div class="arrow-text">Link ไปคำถามพ่วง</div>
+          </div>
         </div>
-      </div>
+      </a>
       <div class="text-top">เป็นเพราะ..</div>
     </div>
   </div>

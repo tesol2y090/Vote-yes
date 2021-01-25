@@ -1,11 +1,17 @@
 <template>
   <div class="nav-container">
     <div class="left-container">
-      <img :src="electLogo" class="elect-logo" />
+      <a href="http://elect.in.th/" target="_blank">
+        <img :src="electLogo" class="elect-logo" style="cursor: pointer" />
+      </a>
     </div>
     <div class="right-container">
-      <img :src="fbLogo" />
-      <img :src="twitLogo" />
+      <a href="https://www.facebook.com/electinth" target="_blank"
+        ><img :src="fbLogo" style="cursor: pointer"
+      /></a>
+      <a href="https://twitter.com/electinth" target="_blank"
+        ><img :src="twitLogo" style="cursor: pointer"
+      /></a>
     </div>
   </div>
 </template>

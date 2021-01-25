@@ -45,7 +45,7 @@ export default Vue.extend({
   line-height: 120%;
   position: absolute;
   width: 16.8rem;
-  left: -19.2rem;
+  right: -19.2rem;
 }
 
 .polity {
@@ -76,14 +76,14 @@ export default Vue.extend({
   line-height: 120%;
   position: absolute;
   width: 22rem;
-  right: -24rem;
+  left: -24rem;
   top: 32rem;
 }
 
 @media #{$mq-mobile} {
   .not-remember {
     font-size: 1.4rem;
-    left: -9.6rem;
+    right: -9.6rem;
     bottom: 8.5rem;
     transform: rotate(-90deg);
   }
@@ -107,7 +107,7 @@ export default Vue.extend({
   .question {
     font-size: 1.4rem;
     top: 9.2rem;
-    left: 12rem;
+    left: -12rem;
     transform: rotate(-90deg);
   }
 }

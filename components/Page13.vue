@@ -29,14 +29,11 @@
       </div>
       <div class="box-bottom-right">
         <div class="other-box">
-          <div class="arrow-left" />
-          <div class="arrow-right" />
+          <div class="arrow-left" @click="handleClickNextBtn(-1)" />
+          <div class="arrow-right" @click="handleClickNextBtn(1)" />
           <div class="other-text text-green">อื่นๆ</div>
           <div class="text-box">
-            ควรเคารพสิทธิของคนทุกคน ทุกสิ่งสามารถให้ร่วมพิจารณาได้
-            แต่ไม่สามารถเป็นดั่งใจได้ทุกสิ่ง ต้องยอมรับ เพราะเป็นเรื่องปกติ
-            มิใช่เรื่องที่ผิดแปลก ต้องว่ากัน
-            ตามเหตุตามผลและรับฟังรอบข้างทั้งฝ่ายสนับสนุน และฝ่ายค้าน
+            {{ activityDatas[currentDataIndex].message }}
           </div>
         </div>
       </div>
@@ -46,10 +43,38 @@
 
 <script lang="ts">
 import Vue from 'vue'
+// @ts-ignore
+import datas from '~/assets/data/vote-yes-data.json'
 
 export default Vue.extend({
   data() {
-    return {}
+    return {
+      currentDataIndex: 0,
+      activityDatas: datas,
+    }
+  },
+
+  methods: {
+    handleClickNextBtn(num: number) {
+      if (this.currentDataIndex === 0 && num === -1) {
+        this.currentDataIndex = this.activityDatas.length - 1
+      } else if (
+        this.currentDataIndex === this.activityDatas.length - 1 &&
+        num === 1
+      ) {
+        this.currentDataIndex = 0
+      } else {
+        this.currentDataIndex = this.currentDataIndex + num
+      }
+    },
+  },
+
+  mounted(this: any) {
+    this.activityDatas = this.activityDatas
+      .map((data: any, index: number) => {
+        return { message: data['activity'], key: index }
+      })
+      .filter((data: any) => data.message !== '')
   },
 })
 </script>
@@ -142,11 +167,14 @@ export default Vue.extend({
   flex-direction: column;
   align-items: center;
   position: relative;
+  justify-content: center;
 }
 
 .other-text {
   font-size: 3.5rem;
   font-weight: bold;
+  position: absolute;
+  top: 4rem;
 }
 
 .text-box {
@@ -259,6 +287,7 @@ export default Vue.extend({
 
   .other-text {
     font-size: 2rem;
+    top: 1rem;
   }
 
   .text-box {

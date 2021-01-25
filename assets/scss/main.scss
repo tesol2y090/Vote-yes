@@ -6,6 +6,18 @@ html {
   box-sizing: border-box;
 }
 
+.swiper-slide {
+  overflow: hidden;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 .text-green {
   color: #28b55f;
 }
