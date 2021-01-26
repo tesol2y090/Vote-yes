@@ -4,7 +4,9 @@
       หากคุณคือคนหนึ่งที่ เคยรับแล้วคิดใหม่ ยังร่วมให้ความเห็นได้
       เพื่อไม่ให้เสียงของคุณ ถูกเอาไปอ้างในการไม่แก้ไขรัฐธรรมนูญอีกต่อไป
       <span class="link text-green">Link ไป Survey</span>
-      <img :src="sharBtn" class="share-btn" />
+      <div class="btn-share" data-sharer="facebook" :data-url="base_url">
+        <img :src="sharBtn" class="share-btn" />
+      </div>
     </div>
   </div>
 </template>
@@ -15,6 +17,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
+      base_url: 'https://cocky-lamarr-eae715.netlify.app/',
       sharBtn: require('~/assets/images/share-button.svg'),
     }
   },

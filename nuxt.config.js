@@ -1,3 +1,4 @@
+const BASE_URL = 'https://cocky-lamarr-eae715.netlify.app/'
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -7,11 +8,65 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'vote-yes',
+    title: 'จากคนเคยรับ แล้วคิดใหม่',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'เสียงของผู้ที่ลงประชามติ รับร่างรธน. ปี 59 แล้วเปลี่ยนใจ',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'จากคนเคยรับ แล้วคิดใหม่',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'เสียงของผู้ที่ลงประชามติ รับร่างรธน. ปี 59 แล้วเปลี่ยนใจ',
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: BASE_URL + 'og_image.png',
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: BASE_URL,
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'จากคนเคยรับ แล้วคิดใหม่',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'เสียงของผู้ที่ลงประชามติ รับร่างรธน. ปี 59 แล้วเปลี่ยนใจ',
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image:src',
+        content: BASE_URL + 'og_image.png',
+      },
+      {
+        hid: 'twitter:url',
+        property: 'twitter:url',
+        content: BASE_URL,
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },

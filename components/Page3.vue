@@ -24,6 +24,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.page-container {
+  height: 50vh;
+  overflow: hidden;
+}
+
 .title {
   position: relative;
   font-size: 7.2rem;

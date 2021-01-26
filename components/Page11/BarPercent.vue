@@ -24,9 +24,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .bar-container {
   width: 100vw;
-  height: 15rem;
+  height: 10.5rem;
   background-color: rgba(0, 0, 0, 0.25);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .bar-green {
@@ -39,13 +39,13 @@ export default Vue.extend({
 
 .percent {
   font-weight: 300;
-  font-size: 12rem;
+  font-size: 9.5rem;
   color: #a9fbc0;
   margin-right: 4.4rem;
 }
 
 .detail {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
 }

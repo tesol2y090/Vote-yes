@@ -10,14 +10,17 @@
         ถูกเอาไปอ้างในการไม่แก้ไขรัฐธรรมนูญอีกต่อไป <br />
         <a
           href="https://docs.google.com/spreadsheets/d/1-pwNEdhKbi5XBIKkobV11UX8VlsuMY0UM6QgVPZQqUY/edit#gid=1369942988"
+          target="_blank"
           style="text-decoration: underline; color: #28b55f"
           >Link ไป Survey</a
         >
-        <img
-          :src="shareBtn"
-          width="140"
-          style="margin-top: 2rem; cursor: pointer"
-        />
+        <div class="btn-share" data-sharer="facebook" :data-url="base_url">
+          <img
+            :src="shareBtn"
+            width="140"
+            style="margin-top: 2rem; cursor: pointer"
+          />
+        </div>
       </div>
     </div>
     <div class="right">
@@ -66,6 +69,7 @@ import datas from '~/assets/data/vote-yes-data.json'
 export default Vue.extend({
   data() {
     return {
+      base_url: 'https://cocky-lamarr-eae715.netlify.app/',
       nextPageIcon:
         window.innerWidth > 768
           ? require('~/assets/images/next-paper-icon.svg')

@@ -50,9 +50,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .bar-container {
   width: 100vw;
-  height: 15rem;
+  height: 10.5rem;
   background-color: rgba(0, 0, 0, 0.25);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
   display: flex;
   align-items: center;

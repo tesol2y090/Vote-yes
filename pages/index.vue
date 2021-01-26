@@ -10,6 +10,7 @@
     <Page7 />
     <Page8 />
     <Page9 />
+    <Page9Text />
     <Page10 />
     <Page11 />
     <Page12 />
@@ -22,7 +23,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Footer from '~/components/Footer.vue'
 
 export default Vue.extend({})
 </script>

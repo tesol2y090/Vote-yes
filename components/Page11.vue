@@ -24,6 +24,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .page-container {
+  height: 80rem;
   flex-direction: column;
   align-items: center;
 }

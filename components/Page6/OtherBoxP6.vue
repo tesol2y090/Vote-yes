@@ -24,7 +24,7 @@
         {{ this.selectedData.message }}
       </div>
     </div>
-    <div class="show-detail-text-mobile hidden">
+    <div v-if="isOpen" class="show-detail-text-mobile hidden">
       {{ this.selectedData.message }}
     </div>
   </div>
@@ -41,6 +41,7 @@ export default Vue.extend({
       poliDatas: datas,
       selectedBoxIndex: -1,
       selectedData: '',
+      isOpen: false,
       top: 1.5,
       left: 1.5,
     }
@@ -48,6 +49,11 @@ export default Vue.extend({
 
   methods: {
     handleClickBox(data: string, index: number) {
+      if (index === this.selectedBoxIndex) {
+        this.isOpen = false
+      } else {
+        this.isOpen = true
+      }
       const boxDetail = document.querySelectorAll('.show-detail-text')[0]
       const boxDetailMobile = document.querySelectorAll(
         '.show-detail-text-mobile'
@@ -55,16 +61,12 @@ export default Vue.extend({
       // Hidding Box
       if (this.selectedBoxIndex === index) {
         this.selectedBoxIndex = -1
-        boxDetailMobile.classList.remove('visible')
-        boxDetailMobile.classList.add('hidden')
         boxDetail.classList.remove('visible')
         boxDetail.classList.add('hidden')
         return
       }
       boxDetail.classList.add('visible')
       boxDetail.classList.remove('hidden')
-      boxDetailMobile.classList.remove('hidden')
-      boxDetailMobile.classList.add('visible')
       this.top = 1.5 + Math.floor(index / 10) * 3.5
       this.left = 1.5 + Math.floor(index % 10) * 3.5
       this.selectedBoxIndex = index

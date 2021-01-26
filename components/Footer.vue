@@ -5,9 +5,15 @@
         <img :src="electLogo" />
       </div>
       <div class="top-right">
-        <img :src="puLogo" />
-        <img :src="bmlLogo" />
-        <img :src="ilawLogo" />
+        <a href="https://punchup.world/" target="_blank">
+          <img :src="puLogo" />
+        </a>
+        <a href="https://www.boonmeelab.com/" target="_blank">
+          <img :src="bmlLogo" />
+        </a>
+        <a href="https://ilaw.or.th/" target="_blank">
+          <img :src="ilawLogo" />
+        </a>
       </div>
     </div>
     <div class="bottom">
@@ -30,8 +36,12 @@
         <div class="pair-container">
           <div class="header">FOLLOW US</div>
           <div class="detail">
-            <img :src="fbLogo" />
-            <img :src="twitLogo" />
+            <a href="https://www.facebook.com/electinth" target="_blank">
+              <img :src="fbLogo" />
+            </a>
+            <a href="https://twitter.com/electinth" target="_blank">
+              <img :src="twitLogo" />
+            </a>
           </div>
         </div>
       </div>

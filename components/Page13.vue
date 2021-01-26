@@ -4,7 +4,7 @@
       <div class="box-top-left">
         <div class="box83">
           <div class="box83-text">
-            แสดงออกต่อสาธารณะต่อคนรอบตัวว่าคิดใหม่ได้แล้ว
+            แสดงออกต่อสาธารณะต่อคนรอบตัวว่าคิดใหม่ได้แล้ว<br />
             <span class="text-green"> 83% </span>
           </div>
         </div>
@@ -12,7 +12,7 @@
       <div class="box-top-right">
         <div class="box53">
           <div class="box53-text">
-            เข้าร่วมชุมนุมเพื่อเรียกร้องให้แก้ไขรัฐธรรมนูญ
+            เข้าร่วมชุมนุมเพื่อเรียกร้องให้แก้ไขรัฐธรรมนูญ<br />
             <span class="text-green"> 53% </span>
           </div>
         </div>
@@ -22,7 +22,7 @@
       <div class="box-bottom-left">
         <div class="box38">
           <div class="box38-text">
-            เป็นหนึ่งใน100,732 ที่เข้าชื่อเสนอ แก้ไขรัฐธรรมนูญ
+            เป็นหนึ่งใน100,732 ที่เข้าชื่อเสนอ แก้ไขรัฐธรรมนูญ<br />
             <span class="text-green"> 38% </span>
           </div>
         </div>
