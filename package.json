@@ -17,6 +17,7 @@
     "nuxt": "^2.14.6",
     "swiper": "^5.3.8",
     "vue-awesome-swiper": "^4.1.1",
+    "vue-sharer": "^1.0.0",
     "vuex": "^3.6.0"
   },
   "devDependencies": {

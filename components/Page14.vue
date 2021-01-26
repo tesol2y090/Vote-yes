@@ -14,13 +14,14 @@
           style="text-decoration: underline; color: #28b55f"
           >Link ไป Survey</a
         >
-        <div class="btn-share" data-sharer="facebook" :data-url="base_url">
-          <img
-            :src="shareBtn"
-            width="140"
-            style="margin-top: 2rem; cursor: pointer"
-          />
-        </div>
+        <img
+          v-sharer
+          data-sharer="facebook"
+          :data-url="base_url"
+          :src="shareBtn"
+          width="140"
+          style="margin-top: 2rem; cursor: pointer"
+        />
       </div>
     </div>
     <div class="right">
@@ -65,8 +66,14 @@
 import Vue from 'vue'
 // @ts-ignore
 import datas from '~/assets/data/vote-yes-data.json'
+// @ts-ignore
+import VueSharer from 'vue-sharer'
 
 export default Vue.extend({
+  directives: {
+    sharer: VueSharer,
+  },
+
   data() {
     return {
       base_url: 'https://cocky-lamarr-eae715.netlify.app/',
