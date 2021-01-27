@@ -223,6 +223,7 @@ export default Vue.extend({
             counterRow = 0
         }
       }
+
       //Random green box per Node
       startPoint.forEach((point) => {
         let newRow = [point[0]]

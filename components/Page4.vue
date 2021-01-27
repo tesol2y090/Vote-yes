@@ -54,7 +54,7 @@ export default Vue.extend({
   line-height: 120%;
   position: absolute;
   top: -11.6rem;
-  right: 3rem;
+  left: 0;
 }
 
 .polity-question {
@@ -65,7 +65,7 @@ export default Vue.extend({
   position: absolute;
   width: 32rem;
   bottom: -18.5rem;
-  right: 0;
+  left: 3rem;
   z-index: 5;
 }
 
@@ -91,7 +91,7 @@ export default Vue.extend({
   .polity {
     font-size: 1.4rem;
     top: -2rem;
-    left: 50%;
+    left: 0;
     transform: translateY(-50%);
     width: 11rem;
   }
@@ -99,7 +99,7 @@ export default Vue.extend({
   .polity-question {
     font-size: 1.4rem;
     bottom: -8rem;
-    left: 50%;
+    left: 1.2rem;
     transform: translateY(-50%);
     width: 10rem;
   }
