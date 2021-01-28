@@ -393,7 +393,7 @@ export default Vue.extend({
       window.addEventListener('scroll', () => {
         if (window.pageYOffset > this.pageTop && !this.play.text94) {
           if (!this.background.firstPlay && !this.play.text94) {
-            this.handleChangeBackground(94, this.pageTop + 500)
+            this.handleChangeBackground(94, this.pageTop + 1500)
             this.show.text94 = true
             this.play.text94 = true
             this.background.firstPlay = true
@@ -403,79 +403,79 @@ export default Vue.extend({
             }, 3500)
           }
         } else if (
-          window.pageYOffset > this.pageTop + 500 &&
+          window.pageYOffset > this.pageTop + 1500 &&
           !this.play.textKnow &&
           !this.play.textKnow
         ) {
           this.show.textKnow = true
           this.play.textKnow = true
           this.show.text94 = false
-          this.scrollTo(this.pageTop + 1000)
+          this.scrollTo(this.pageTop + 1800)
         } else if (
-          window.pageYOffset > this.pageTop + 1000 &&
+          window.pageYOffset > this.pageTop + 1800 &&
           !this.play.text88 &&
           !this.play.text88
         ) {
           this.show.text88 = true
           this.play.text88 = true
           this.show.textKnow = false
-          this.handleChangeBackground(88, this.pageTop + 1500)
+          this.handleChangeBackground(88, this.pageTop + 3100)
         } else if (
-          window.pageYOffset > this.pageTop + 1500 &&
+          window.pageYOffset > this.pageTop + 3100 &&
           !this.play.text85 &&
           !this.play.text85
         ) {
           this.show.text85 = true
           this.play.text85 = true
           this.show.text88 = false
-          this.handleChangeBackground(85, this.pageTop + 2000)
+          this.handleChangeBackground(85, this.pageTop + 4400)
         } else if (
-          window.pageYOffset > this.pageTop + 2000 &&
+          window.pageYOffset > this.pageTop + 4400 &&
           !this.play.text79 &&
           !this.play.text79
         ) {
           this.show.text79 = true
           this.play.text79 = true
           this.show.text85 = false
-          this.handleChangeBackground(79, this.pageTop + 2500)
+          this.handleChangeBackground(79, this.pageTop + 5700)
         } else if (
-          window.pageYOffset > this.pageTop + 2500 &&
+          window.pageYOffset > this.pageTop + 5700 &&
           !this.play.text75 &&
           !this.play.text75
         ) {
           this.show.text75 = true
           this.play.text75 = true
           this.show.text79 = false
-          this.handleChangeBackground(75, this.pageTop + 3000)
+          this.handleChangeBackground(75, this.pageTop + 7000)
         } else if (
-          window.pageYOffset > this.pageTop + 3000 &&
+          window.pageYOffset > this.pageTop + 7000 &&
           !this.play.text72 &&
           !this.play.text72
         ) {
           this.show.text72 = true
           this.play.text72 = true
           this.show.text75 = false
-          this.handleChangeBackground(72, this.pageTop + 3500)
+          this.handleChangeBackground(72, this.pageTop + 8300)
         } else if (
-          window.pageYOffset > this.pageTop + 3500 &&
+          window.pageYOffset > this.pageTop + 8300 &&
           !this.play.text69 &&
           !this.play.text69
         ) {
           this.show.text69 = true
           this.play.text69 = true
           this.show.text72 = false
-          this.handleChangeBackground(69, this.pageTop + 4000)
+          this.handleChangeBackground(69, this.pageTop + 9600)
         } else if (
-          window.pageYOffset > this.pageTop + 4000 &&
+          window.pageYOffset > this.pageTop + 9600 &&
           !this.play.text56 &&
           !this.play.text56
         ) {
           this.show.text56 = true
           this.play.text56 = true
           this.show.text69 = false
-          this.handleChangeBackground(56, this.pageTop + 4500)
+          this.handleChangeBackground(56, this.pageTop + 10900)
         } else if (
-          window.pageYOffset > this.pageTop + 4500 &&
+          window.pageYOffset > this.pageTop + 10900 &&
           !this.play.textother &&
           !this.play.textother
         ) {
@@ -512,7 +512,7 @@ export default Vue.extend({
 .page-slide {
   position: sticky;
   top: 0;
-  height: 700vh;
+  height: 12000px;
   overflow: hidden;
 }
 
