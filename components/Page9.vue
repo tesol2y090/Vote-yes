@@ -1,6 +1,6 @@
 <template>
   <div class="page-slide page-container page-light-green page-height-80">
-    <div style="position: absolute; top:0;left0">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0">
       <div class="box-container-display"></div>
     </div>
     <div v-if="show.text94" class="text-94 fade-in-text94">
@@ -27,7 +27,7 @@
     <div v-if="show.text79" class="fade-in-text">
       <label>79%</label><br />
       <span>คสช. ยังอยู่จนหลังเลือกตั้ง และการกระทำ</span><br />
-      <span>การออกคำสั้งใดๆ ก็ไม่มีความผิด</span>
+      <span>การออกคำสั่งใดๆ ก็ไม่มีความผิด</span>
     </div>
     <div v-if="show.text75" class="fade-in-text">
       <label>75%</label><br />
@@ -90,8 +90,10 @@ export default Vue.extend({
         firstPlay: false,
       },
       isDesktop: window.innerWidth > 768,
+      event: ['wheel', 'scroll', 'DOMMouseScroll', 'touchmove'],
     }
   },
+
   methods: {
     addBoxToPage() {
       const widthOfBox: number = this.isDesktop ? 20 : 10
@@ -130,7 +132,30 @@ export default Vue.extend({
       })
     },
 
-    handleChangeBackground(bluePercent: number) {
+    stopMouse(e: any) {
+      e.preventDefault()
+      e.stopPropagation()
+      return
+    },
+
+    disableMouseScroll() {
+      this.event.forEach((evt) => {
+        window.addEventListener(evt, this.stopMouse, {
+          passive: false,
+        })
+      })
+    },
+
+    enableMouseScroll() {
+      this.event.forEach((evt) => {
+        window.removeEventListener(evt, this.stopMouse, {
+          capture: false,
+        })
+      })
+    },
+
+    handleChangeBackground(bluePercent: number, yPos: number) {
+      this.disableMouseScroll()
       let blueBox: any = []
       let greenBox: any = []
       const widthOfBox: number = this.isDesktop ? 20 : 10
@@ -306,13 +331,26 @@ export default Vue.extend({
           data.style.backgroundColor = '#28B55F'
         }, i * WAITINGTIME)
       })
-      //  console.log(`height box length = ${totalBoxHeight}`)
-      // console.log(`width box length = ${totalBoxWidth}`)
-      // console.log(`height side = ${heightSide}`)
-      // console.log(`width side = ${widthSide}`)
-      // console.log(`dist between height = ${distBtwHeight}`)
-      // console.log(`dist between width = ${distBtwWidth}`)
-      // console.log(DENSITYPERNODE)
+      setTimeout(() => {
+        this.enableMouseScroll()
+        this.scrollTo(yPos)
+      }, blueBox.length * WAITINGTIME)
+    },
+
+    toY(y: number) {
+      window.scrollTo(0, y)
+    },
+
+    scrollTo(yPos: number) {
+      this.event.forEach((evt) => {
+        // @ts-ignore
+        window.addEventListener(evt, this.toY(yPos))
+      })
+      // @ts-ignore
+      this.event.forEach((evt) => {
+        // @ts-ignore
+        window.removeEventListener(evt, this.toY(yPos))
+      })
     },
 
     randomBtw(min: number, max: number) {
@@ -355,7 +393,7 @@ export default Vue.extend({
       window.addEventListener('scroll', () => {
         if (window.pageYOffset > this.pageTop && !this.play.text94) {
           if (!this.background.firstPlay && !this.play.text94) {
-            this.handleChangeBackground(94)
+            this.handleChangeBackground(94, this.pageTop + 500)
             this.show.text94 = true
             this.play.text94 = true
             this.background.firstPlay = true
@@ -372,6 +410,7 @@ export default Vue.extend({
           this.show.textKnow = true
           this.play.textKnow = true
           this.show.text94 = false
+          this.scrollTo(this.pageTop + 1000)
         } else if (
           window.pageYOffset > this.pageTop + 1000 &&
           !this.play.text88 &&
@@ -380,7 +419,7 @@ export default Vue.extend({
           this.show.text88 = true
           this.play.text88 = true
           this.show.textKnow = false
-          this.handleChangeBackground(88)
+          this.handleChangeBackground(88, this.pageTop + 1500)
         } else if (
           window.pageYOffset > this.pageTop + 1500 &&
           !this.play.text85 &&
@@ -389,7 +428,7 @@ export default Vue.extend({
           this.show.text85 = true
           this.play.text85 = true
           this.show.text88 = false
-          this.handleChangeBackground(85)
+          this.handleChangeBackground(85, this.pageTop + 2000)
         } else if (
           window.pageYOffset > this.pageTop + 2000 &&
           !this.play.text79 &&
@@ -398,7 +437,7 @@ export default Vue.extend({
           this.show.text79 = true
           this.play.text79 = true
           this.show.text85 = false
-          this.handleChangeBackground(79)
+          this.handleChangeBackground(79, this.pageTop + 2500)
         } else if (
           window.pageYOffset > this.pageTop + 2500 &&
           !this.play.text75 &&
@@ -407,7 +446,7 @@ export default Vue.extend({
           this.show.text75 = true
           this.play.text75 = true
           this.show.text79 = false
-          this.handleChangeBackground(75)
+          this.handleChangeBackground(75, this.pageTop + 3000)
         } else if (
           window.pageYOffset > this.pageTop + 3000 &&
           !this.play.text72 &&
@@ -416,7 +455,7 @@ export default Vue.extend({
           this.show.text72 = true
           this.play.text72 = true
           this.show.text75 = false
-          this.handleChangeBackground(72)
+          this.handleChangeBackground(72, this.pageTop + 3500)
         } else if (
           window.pageYOffset > this.pageTop + 3500 &&
           !this.play.text69 &&
@@ -425,7 +464,7 @@ export default Vue.extend({
           this.show.text69 = true
           this.play.text69 = true
           this.show.text72 = false
-          this.handleChangeBackground(69)
+          this.handleChangeBackground(69, this.pageTop + 4000)
         } else if (
           window.pageYOffset > this.pageTop + 4000 &&
           !this.play.text56 &&
@@ -434,7 +473,7 @@ export default Vue.extend({
           this.show.text56 = true
           this.play.text56 = true
           this.show.text69 = false
-          this.handleChangeBackground(56)
+          this.handleChangeBackground(56, this.pageTop + 4500)
         } else if (
           window.pageYOffset > this.pageTop + 4500 &&
           !this.play.textother &&
@@ -473,7 +512,6 @@ export default Vue.extend({
 .page-slide {
   position: sticky;
   top: 0;
-  flex-wrap: wrap;
   height: 700vh;
   overflow: hidden;
 }
@@ -580,7 +618,7 @@ export default Vue.extend({
   .fade-in-text,
   .fade-in-text94 {
     font-size: 2.5rem;
-    width: 26.9rem;
+    width: 28rem;
     label {
       font-size: 7.2rem;
     }

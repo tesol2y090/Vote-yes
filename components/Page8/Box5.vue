@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="text">
-      เห็นด้วยกับการให้ ส.ว. ชุด พิเศษเลือกนายกรัฐมนตรีได้
+      เห็นด้วยกับการให้ ส.ว. ชุด พิเศษเลือกนายกรัฐมนตรีได้<br />
       <span class="text-green">5.42%</span>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default Vue.extend({})
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 120%;
-  width: 40rem;
+  width: 42rem;
   margin-left: 1.3rem;
   margin-top: 0.8rem;
   color: #000;

@@ -68,7 +68,7 @@ export default Vue.extend({
 
 .span-text {
   background-color: #20208e;
-  line-height: 0;
+  line-height: 120%;
   text-align: left;
   font-size: 1.5rem;
   color: #fff;
@@ -77,6 +77,11 @@ export default Vue.extend({
 @media #{$mq-mobile} {
   .page-container {
     padding: 0;
+  }
+
+  .span-text {
+    padding-left: 0.6rem;
+    line-height: 0%;
   }
 
   .box-container {

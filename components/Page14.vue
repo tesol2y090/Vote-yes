@@ -129,8 +129,9 @@ export default Vue.extend({
 
 .left {
   width: 45.4rem;
-  overflow-y: scroll;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -142,17 +143,17 @@ export default Vue.extend({
 .left-text {
   font-weight: bold;
   font-size: 4.8rem;
-  margin-top: 25rem;
+  // margin-top: 25rem;
 }
 
 .share-con {
   display: flex;
   flex-direction: column;
-  margin-top: 40rem;
+  margin-top: 2.4rem;
   font-size: 2rem;
   color: #000;
   line-height: 27px;
-  margin-bottom: 40rem;
+  // margin-bottom: 40rem;
 }
 
 .right {

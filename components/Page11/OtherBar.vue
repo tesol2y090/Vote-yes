@@ -70,7 +70,7 @@ export default Vue.extend({
 }
 
 .slide-container {
-  width: 43rem;
+  width: 64rem;
   font-size: 2rem;
   color: #fff;
   text-align: center;
@@ -121,19 +121,21 @@ export default Vue.extend({
   .slide-container {
     margin-top: 2rem;
     font-size: 1rem;
-    width: 16.8rem;
+    width: 26rem;
   }
 
   .left-button {
     border-top: 0.5rem solid transparent;
     border-right: 1rem solid #a9fbc0;
     border-bottom: 0.5rem solid transparent;
+    left: -3rem;
   }
 
   .right-button {
     border-top: 0.5rem solid transparent;
     border-left: 1rem solid #a9fbc0;
     border-bottom: 0.5rem solid transparent;
+    right: -3rem;
   }
 }
 </style>
