@@ -3,14 +3,25 @@
     <div class="box-container">
       หากคุณคือคนหนึ่งที่ เคยรับแล้วคิดใหม่ ยังร่วมให้ความเห็นได้
       เพื่อไม่ให้เสียงของคุณ ถูกเอาไปอ้างในการไม่แก้ไขรัฐธรรมนูญอีกต่อไป
-      <span class="link text-green">Link ไป Survey</span>
-      <img
-        v-sharer
-        data-sharer="facebook"
-        :data-url="base_url"
-        :src="sharBtn"
-        class="share-btn"
-      />
+      <div class="share-btn">
+        <img :src="shareLeft" height="30" />
+        <img
+          :src="fbBtn"
+          v-sharer
+          data-sharer="facebook"
+          :data-url="base_url"
+          height="30"
+          style="cursor: pointer"
+        />
+        <img
+          :src="twBtn"
+          v-sharer
+          data-sharer="twitter"
+          :data-url="base_url"
+          height="30"
+          style="cursor: pointer"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +40,9 @@ export default Vue.extend({
     return {
       base_url: 'https://cocky-lamarr-eae715.netlify.app/',
       sharBtn: require('~/assets/images/share-button.svg'),
+      shareLeft: require('~/assets/images/logo/share-btn-left.svg'),
+      fbBtn: require('~/assets/images/logo/fb-btn.svg'),
+      twBtn: require('~/assets/images/logo/twitter-btn.svg'),
     }
   },
 })
@@ -42,6 +56,11 @@ export default Vue.extend({
 @media #{$mq-mobile} {
   .page-container {
     display: flex;
+  }
+
+  .share-btn {
+    display: flex;
+    margin: 0 auto;
   }
 
   .box-container {

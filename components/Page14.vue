@@ -8,20 +8,23 @@
         หากคุณคือคนหนึ่งที่ เคยรับแล้วคิดใหม่<br />
         ยังร่วมให้ความเห็นได้ เพื่อไม่ให้เสียงของคุณ<br />
         ถูกเอาไปอ้างในการไม่แก้ไขรัฐธรรมนูญอีกต่อไป <br />
-        <a
-          href="https://docs.google.com/spreadsheets/d/1-pwNEdhKbi5XBIKkobV11UX8VlsuMY0UM6QgVPZQqUY/edit#gid=1369942988"
-          target="_blank"
-          style="text-decoration: underline; color: #28b55f"
-          >Link ไป Survey</a
-        >
-        <img
-          v-sharer
-          data-sharer="facebook"
-          :data-url="base_url"
-          :src="shareBtn"
-          width="140"
-          style="margin-top: 2rem; cursor: pointer"
-        />
+        <div class="share-btn">
+          <img :src="shareLeft" />
+          <img
+            :src="fbBtn"
+            v-sharer
+            data-sharer="facebook"
+            :data-url="base_url"
+            style="cursor: pointer"
+          />
+          <img
+            :src="twBtn"
+            v-sharer
+            data-sharer="twitter"
+            :data-url="base_url"
+            style="cursor: pointer"
+          />
+        </div>
       </div>
     </div>
     <div class="right">
@@ -83,6 +86,9 @@ export default Vue.extend({
           : require('~/assets/images/next-paper-icon-mobile.svg'),
       datas: [...Array(30).keys()],
       shareBtn: require('~/assets/images/share-btn.svg'),
+      shareLeft: require('~/assets/images/logo/share-btn-left.svg'),
+      fbBtn: require('~/assets/images/logo/fb-btn.svg'),
+      twBtn: require('~/assets/images/logo/twitter-btn.svg'),
       showText: false,
       isDesktop: window.innerWidth > 768,
       tellData: datas,
@@ -200,6 +206,11 @@ export default Vue.extend({
   left: 1rem;
   border: 0.3rem solid #f0efe9;
   position: absolute;
+}
+
+.share-btn {
+  display: flex;
+  margin-top: 1.2rem;
 }
 
 @media #{$mq-mobile} {

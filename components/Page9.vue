@@ -483,6 +483,9 @@ export default Vue.extend({
           this.play.textother = true
           this.show.text56 = false
           this.handleChangeBackground100(0)
+        } else if (window.pageYOffset > this.pageTop + 11300) {
+          this.show.textother = false
+          this.handleChangeBackground100(0)
         } else if (window.pageYOffset < this.pageTop) {
           this.show.text94 = false
           this.show.textKnow = false
