@@ -80,7 +80,7 @@ export default Vue.extend({
   }
 
   .span-text {
-    padding-left: 0.6rem;
+    padding-left: 1.2rem;
     line-height: 0%;
   }
 

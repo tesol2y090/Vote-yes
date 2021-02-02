@@ -18,20 +18,46 @@
     </div>
     <div class="bottom">
       <div class="bottom-left">
-        <div class="text">VISUALIZATION</div>
-        <div class="text">TOOL</div>
-        <div class="text">ARTICLE</div>
-        <div class="text">INFOGRAPHIC</div>
-        <div class="text">DOWNLOAD DATA</div>
+        <div class="text">
+          <a href="https://elect.in.th/visualization/" target="_blank">
+            VISUALIZATION
+          </a>
+        </div>
+        <div class="text">
+          <a href="https://elect.in.th/tool/" target="_blank"> TOOL </a>
+        </div>
+        <div class="text">
+          <a href="https://elect.in.th/article/" target="_blank">ARTICLE</a>
+        </div>
+        <div class="text">
+          <a href="https://elect.in.th/infographic/" target="_blank"
+            >INFOGRAPHIC</a
+          >
+        </div>
+        <div class="text">
+          <a href="https://elect.in.th/download-data/" target="_blank"
+            >DOWNLOAD DATA</a
+          >
+        </div>
       </div>
       <div class="bottom-right">
         <div class="pair-container">
           <div class="header">ABOUT US</div>
-          <div class="detail">เราคือใคร.. ทำไมต้อง Elect?</div>
+          <div class="detail">
+            <a href="https://elect.in.th/about/" target="_blank"
+              >เราคือใคร.. ทำไมต้อง Elect?</a
+            >
+          </div>
         </div>
         <div class="pair-container">
           <div class="header">CONTRACT US</div>
-          <div class="detail">E-mail : contact@elect.in.th</div>
+          <div class="detail">
+            <div class="detail">
+              <a href="mailto:contact@elect.in.th" target="_blank">
+                E-mail : contact@elect.in.th
+              </a>
+            </div>
+          </div>
         </div>
         <div class="pair-container">
           <div class="header">FOLLOW US</div>
@@ -111,6 +137,15 @@ export default Vue.extend({
     width: 50%;
     justify-content: center;
     .text {
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.2rem 0.4rem;
+        &:hover {
+          color: #000;
+          background-color: #fff;
+        }
+      }
       text-align: center;
       font-family: 'Kondolar';
       font-size: 1.6rem;
@@ -147,6 +182,13 @@ export default Vue.extend({
       margin-top: 1rem;
       font-weight: normal;
       color: #fff;
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
