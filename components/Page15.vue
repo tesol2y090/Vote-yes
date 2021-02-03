@@ -38,7 +38,7 @@ export default Vue.extend({
 
   data() {
     return {
-      base_url: 'https://cocky-lamarr-eae715.netlify.app/',
+      base_url: 'https://elect.in.th/once-we-voted-yes/',
       sharBtn: require('~/assets/images/share-button.svg'),
       shareLeft: require('~/assets/images/logo/share-btn-left.svg'),
       fbBtn: require('~/assets/images/logo/fb-btn.svg'),

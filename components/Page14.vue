@@ -79,7 +79,7 @@ export default Vue.extend({
 
   data() {
     return {
-      base_url: 'https://cocky-lamarr-eae715.netlify.app/',
+      base_url: 'https://elect.in.th/once-we-voted-yes/',
       nextPageIcon:
         window.innerWidth > 768
           ? require('~/assets/images/next-paper-icon.svg')

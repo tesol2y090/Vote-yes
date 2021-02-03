@@ -1,4 +1,4 @@
-const BASE_URL = 'https://cocky-lamarr-eae715.netlify.app/'
+const BASE_URL = 'https://elect.in.th/once-we-voted-yes/'
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
