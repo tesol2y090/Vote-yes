@@ -101,4 +101,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  generate: {
+    dir: 'dist/once-we-voted-yes'
+  },
+
+  router: {
+    base: '/once-we-voted-yes/'
+  }
 }

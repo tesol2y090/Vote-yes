@@ -211,6 +211,68 @@ export default Vue.extend({
   cursor: pointer;
 }
 
+@media #{$mq-tablet} {
+.box83 {
+  width: 50rem;
+  height: 50rem;
+  background-color: #20208e;
+  padding-top: 2.9rem;
+  padding-left: 4.9rem;
+  &-text {
+    color: #fff;
+    font-size: 7.2rem;
+    font-weight: bold;
+    line-height: 120%;
+    width: 45rem;
+  }
+}
+
+.box53 {
+  width: 39rem;
+  height: 39rem;
+  background-color: #20208e;
+  padding-top: 4.2rem;
+  padding-left: 3.3rem;
+  margin-top: 49.2rem;
+  &-text {
+    color: #fff;
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 120%;
+    width: 38.6rem;
+  }
+}
+
+.box38 {
+  width: 31.8rem;
+  height: 31.8rem;
+  background-color: #20208e;
+  padding-top: 2.4rem;
+  padding-left: 3.8rem;
+  &-text {
+    color: #fff;
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 120%;
+    width: 26rem;
+  }
+}
+
+.other-box {
+  width: 39rem;
+  height: 39rem;
+  border: 0.3rem solid #20208e;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+}
+
+
+
 @media #{$mq-mobile} {
   .box-top {
     flex-direction: column;

@@ -23,14 +23,12 @@
         </div>
       </div>
     </div>
-  </div>
-</template>
+  </div></template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
-</script>
+export default Vue.extend({})</script>
 
 <style lang="scss" scoped>
 .box-container {
@@ -66,6 +64,24 @@ export default Vue.extend({})
   }
 }
 
+@media #{$mq-tablet} {
+  .box-bottom {
+    display: flex;
+    margin-top: 5rem;
+    &-left {
+      display: flex;
+      width: 50rem;
+      flex-wrap: wrap;
+      margin-right: 10rem;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
 @media #{$mq-mobile} {
   .box-top {
     flex-direction: column;
@@ -87,4 +103,5 @@ export default Vue.extend({})
     }
   }
 }
+
 </style>

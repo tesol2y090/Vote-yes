@@ -33,6 +33,17 @@ export default Vue.extend({})
   color: #000;
 }
 
+@media #{$mq-tablet} {
+  .box {
+    width: 12rem;
+    height: 12rem;
+  }
+  .text {
+    font-size: 2rem;
+    width: 11rem;
+  }
+}
+
 @media #{$mq-mobile} {
   .box {
     width: 7rem;

@@ -14,7 +14,7 @@
       <div class="question">
         <span class="text-green">คำถามพ่วง</span> 1.55%
       </div>
-      <img :src="box" />
+      <img class="img-box" :src="box" />
     </div>
   </div>
 </template>
@@ -26,8 +26,10 @@ export default Vue.extend({
   data() {
     return {
       box:
-        window.innerWidth > 768
+        window.innerWidth > 1024
           ? require('~/assets/images/box-page4-dt.svg')
+          : window.innerWidth > 768
+          ? require('~/assets/images/box-page4-tl.svg')
           : require('~/assets/images/box-page4-mobile.svg'),
     }
   },

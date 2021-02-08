@@ -6,7 +6,9 @@ $dark-blue: #0c1026;
 $purple: #af86da;
 $pink: #f86471;
 
+$bp-tablet: 1024px;
 $bp-mobile: 768px;
 $bp-small-mobile: 320px;
 $mq-mobile: '(max-width: #{$bp-mobile})';
 $mq-small-mobile: '(max-width: #{$bp-small-mobile})';
+$mq-tablet: '(max-width: #{$bp-tablet})';

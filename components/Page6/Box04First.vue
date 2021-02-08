@@ -33,6 +33,17 @@ export default Vue.extend({})
   z-index: 9;
 }
 
+@media #{$mq-tablet} {
+  .box {
+    width: 7.6rem;
+    height: 7.6rem;
+  }
+  .text {
+    font-size: 2rem;
+    width: 16rem;
+  }
+}
+
 @media #{$mq-mobile} {
   .box {
     width: 2.8rem;

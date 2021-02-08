@@ -55,6 +55,23 @@ export default Vue.extend({})
   }
 }
 
+@media #{$mq-tablet} {
+.box-bottom {
+  display: flex;
+  margin-top: 5rem;
+  &-left {
+    display: flex;
+    width: 46.5rem;
+    flex-wrap: wrap;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+  }
+}
+}
+
 @media #{$mq-mobile} {
   .box-top {
     flex-direction: column;
